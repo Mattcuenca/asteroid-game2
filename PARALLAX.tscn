@@ -29,10 +29,10 @@ anchor_mode = 1
 rotating = false
 current = true
 zoom = Vector2( 0.5, 0.5 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
+limit_left = 1024
+limit_top = 1024
+limit_right = 1024
+limit_bottom = 1024
 limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -47,9 +47,11 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Material", "Offset", "Pause", "Smoothing", "Transform", "Visibility", "Z Index" ]
 
 [node name="Ship2" type="Sprite" parent="." index="1"]
 
+editor/display_folded = true
 visible = false
 position = Vector2( 320, 320 )
 scale = Vector2( 0.25, 0.25 )
@@ -93,8 +95,9 @@ scroll_offset = Vector2( 0, 0 )
 scroll_base_offset = Vector2( 0, 0 )
 scroll_base_scale = Vector2( 1, 1 )
 scroll_limit_begin = Vector2( 0, 0 )
-scroll_limit_end = Vector2( 0, 0 )
+scroll_limit_end = Vector2( -1, -1 )
 scroll_ignore_camera_zoom = false
+_sections_unfolded = [ "Scroll" ]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
 
@@ -110,7 +113,7 @@ __meta__ = {
 [node name="BG" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
 position = Vector2( 2580, 1645 )
-scale = Vector2( 3, 3 )
+scale = Vector2( 10, 10 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
@@ -125,13 +128,10 @@ _sections_unfolded = [ "Animation", "Transform" ]
 
 position = Vector2( 367, 196 )
 scale = Vector2( 0.5, 0.5 )
-motion_scale = Vector2( 0, 0 )
+motion_scale = Vector2( 0.3, 0.3 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="ASTEROIDS" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
 
@@ -163,18 +163,22 @@ motion_scale = Vector2( 0.1, 0.1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="BLUEPLANET" type="Sprite" parent="ParallaxBackground/ParallaxLayer4" index="0"]
 
 position = Vector2( 789.778, 80 )
 texture = ExtResource( 7 )
 
-[node name="ASTEROIDS2" type="Sprite" parent="ParallaxBackground/ParallaxLayer4" index="1"]
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" index="4"]
 
-position = Vector2( 879.389, 93.5 )
+motion_scale = Vector2( 0.2, 0.2 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="ASTEROIDS2" type="Sprite" parent="ParallaxBackground/ParallaxLayer5" index="0"]
+
+position = Vector2( 832.389, 24.5 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
 

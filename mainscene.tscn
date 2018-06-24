@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://subscene.tscn" type="PackedScene" id=1]
+
+[node name="Node" type="Node"]
+
+[node name="Node2D" parent="." index="0" instance=ExtResource( 1 )]
+
+rotation = 0.438718
+
+[node name="Node2D" parent="Node2D" index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 492.889, 146.455 )
+rotation = -0.861443
+
+[node name="Node2D2" parent="." index="1" instance=ExtResource( 1 )]
+
+rotation = 0.438718
+
+[node name="Node2D3" parent="." index="2" instance=ExtResource( 1 )]
+
+
+[editable path="Node2D/Node2D"]

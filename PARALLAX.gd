@@ -41,4 +41,14 @@ func _process(delta):
     var velocity = direction * MOVEMENT_SPEED * delta;
     position += velocity
 
-	
+func space():
+     MOVEMENT_SPEED = 2500
+     pass
+
+func _input(event):
+     if event.is_action_pressed("space"):
+        space()
+     pass
+     if event.is_action_released("space"):
+        MOVEMENT_SPEED = 500
+     pass
